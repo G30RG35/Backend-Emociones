@@ -35,23 +35,32 @@ export const loginPersona = async (req, res) => {
     }
 
     try {
+        // Verificar si la persona existe en la base de datos
         const sql = 'SELECT * FROM Personas WHERE email = ?';
         const [rows] = await db.execute(sql, [email]);
 
         if (rows.length === 0) {
-            return res.status(401).json({ error: 'Email o contraseña incorrectos' });
+            return res.status(404).json({ error: 'Email o contraseña incorrectos' });
         }
 
         const persona = rows[0];
-        const isPasswordValid = await bcrypt.compare(password, persona.password);
 
+        // Verificar la contraseña
+        const isPasswordValid = await bcrypt.compare(password, persona.password);
         if (!isPasswordValid) {
             return res.status(401).json({ error: 'Email o contraseña incorrectos' });
         }
 
-        const token = jwt.sign({ id: persona.id, email: persona.email }, process.env.JWT_SECRET, {
-            expiresIn: '1h'
-        });
+        // Crear un token JWT
+        const token = jwt.sign(
+            {
+                id_persona: persona.id_persona,
+                nombre: persona.nombre 
+            },
+            process.env.JWT_SECRET,     
+            { expiresIn: '1h' }
+        );
+
 
         res.status(200).json({ message: 'Login exitoso', token });
     } catch (error) {
