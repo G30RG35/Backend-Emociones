@@ -5,12 +5,17 @@ import personasRoutes from './routes/personas.js';
 import registrosRoutes from './routes/registros.js';
 import * as dotenv from 'dotenv';
 import db from './config/db.js';
+import cors from 'cors';
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Configuración de CORS
+app.use(cors({
+    origin: 'http://127.0.0.1:5500' // Reemplaza esto con el origen desde donde quieres permitir las solicitudes
+}));
 app.use(bodyParser.json());
 
 app.use('/emociones', emocionesRoutes);
