@@ -133,6 +133,14 @@ $(document).ready(function () {
       if (emocionMaxima.nombre_emocion === "Irritabilidad") {
         window.location.href = "http://127.0.0.1:5501/frontend/rec/res4.html";
       }
+
+      if (emocionMaxima.nombre_emocion === "Desganado") {
+        window.location.href = "http://127.0.0.1:5501/frontend/rec/res5.html";
+      }
+
+      if (emocionMaxima.nombre_emocion === "Alegría") {
+        window.location.href = "http://127.0.0.1:5501/frontend/rec/resb.html";
+      }
     }
 
     obtenerEmocionMaxima(data);
