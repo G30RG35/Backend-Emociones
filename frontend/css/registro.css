@@ -2,29 +2,6 @@
     --colorTextos: #49454567;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-#main-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 *{
     margin:0;
     padding:0;
@@ -53,6 +30,8 @@ body {
     text-align: center;
     position: absolute;
     z-index: 2;
+    top: 25%;
+    left: 40%;
 }
  
 .form_title{
