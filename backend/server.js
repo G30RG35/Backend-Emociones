@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 
 // Configuración de CORS
 app.use(cors({
-    origin: 'http://127.0.0.1:5500' // Reemplaza esto con el origen desde donde quieres permitir las solicitudes
+    origin: 'http://127.0.0.1:5501' // Reemplaza esto con el origen desde donde quieres permitir las solicitudes
 }));
 app.use(bodyParser.json());
 
