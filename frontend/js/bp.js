@@ -1,7 +1,8 @@
 $(document).ready(function () {
-  // Función para obtener los registros de las últimas 7 días
+  // Función para obtener los registros de los últimos 7 días
   const token = window.localStorage.getItem("token");
   let data = [];
+
   function base64UrlDecode(str) {
     str = str.replace(/-/g, "+").replace(/_/g, "/");
     let padding = "=".repeat((4 - (str.length % 4)) % 4);
@@ -32,7 +33,8 @@ $(document).ready(function () {
       },
       success: function (response) {
         // Manejar la respuesta exitosa
-        data= response;
+        data = response;
+        console.log(data);
         actualizarPorcentajes(response);
       },
       error: function (xhr, status, error) {
@@ -57,7 +59,7 @@ $(document).ready(function () {
     });
   }
 
-  // Llamar a la función para obtener los registros de las últimas 7 días al cargar la página
+  // Llamar a la función para obtener los registros de los últimos 7 días al cargar la página
   obtenerRegistrosUltimos7Dias();
 
   // Función para hacer la llamada al endpoint y llenar el select con las semanas del usuario
@@ -68,7 +70,6 @@ $(document).ready(function () {
       success: function (response) {
         const select = $("#semanasUsuario");
         select.empty(); // Vacía el select antes de agregar las nuevas opciones
-        select.append(`<option value="actual">Semana actual</option>`); // Agrega la opción por defecto
 
         // Agrega las opciones para cada semana del usuario
         response.forEach((semana) => {
@@ -98,6 +99,7 @@ $(document).ready(function () {
         `http://localhost:3000/registros/${persona_id}/semanapasada/${semanaSeleccionada}`
       );
       data = await response.json();
+      console.log(data);
       actualizarPorcentajes(data);
       // Aquí puedes mostrar los datos de la semana seleccionada en la interfaz de usuario
     } catch (error) {
@@ -106,13 +108,35 @@ $(document).ready(function () {
     }
   });
 
-  $("#resultados").click(function () {
-    const emocionMaxima = data.reduce((max, emocion) => {
-      return parseInt(emocion.total_calificacion) > parseInt(max.total_calificacion) ? emocion : max;
-    }, data[0]);
-    
-    console.log(emocionMaxima);
-    // cambio de pagina
-    // window.location.href = "resultados.html";
+  $("#recomendaciones").click(function () {
+    function obtenerEmocionMaxima(data) {
+      const emocionMaxima = data.reduce((max, emocion) => {
+        return parseInt(emocion.total_calificacion) >
+          parseInt(max.total_calificacion)
+          ? emocion
+          : max;
+      }, data[0]);
+
+      console.log(emocionMaxima);
+      if (emocionMaxima.nombre_emocion === "Tristeza") {
+        window.location.href = "http://127.0.0.1:5501/frontend/rec/res1.html";
+      }
+
+      if (emocionMaxima.nombre_emocion === "Ansiedad") {
+        window.location.href = "http://127.0.0.1:5501/frontend/rec/res2.html";
+      }
+
+      if (emocionMaxima.nombre_emocion === "Estres") {
+        window.location.href = "http://127.0.0.1:5501/frontend/rec/res3.html";
+      }
+
+      if (emocionMaxima.nombre_emocion === "Irritabilidad") {
+        window.location.href = "http://127.0.0.1:5501/frontend/rec/res4.html";
+      }
+    }
+
+    obtenerEmocionMaxima(data);
   });
+
+
 });

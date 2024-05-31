@@ -9,28 +9,31 @@
   <body>
     <header>
       <div class="header-left">
-        <h1 id="user" >Usuario</h1>
-    </div>
+        <h1 id="user">Usuario</h1>
+      </div>
       <nav class="header-right">
-          <ul>
-              <li><a href="./principal.html">Inicio</a></li>
-              <li><a href="./bp.html">Tus Sentimientos</a></li>
-              <li><a href="./perfil.html">Perfil</a></li>
-              <li><a href="./is.html">Cerrar Sesión</a></li>
-          </ul>
+        <ul>
+          <li><a href="./principal.html">Inicio</a></li>
+          <li><a href="./bp.html">Tus Sentimientos</a></li>
+          <li><a href="./cont.html">Registrar Emociones</a></li>
+          <li><a href="./perfil.html">Perfil</a></li>
+          <li><a href="./is.html">Cerrar Sesión</a></li>
+        </ul>
       </nav>
-  </header>
+    </header>
 
     <div class="container">
       <h1 class="title">Tus Emociones en esta ultima semana</h1>
-      <select id="semanasUsuario">
+      <select class="font" id="semanasUsuario">
         <option value="actual">Semana actual</option>
       </select>
 
+      <button id="recomendaciones" class="form_submit">Ver recomendaciones</button>
+
       <div class="progress-bars">
-        <div class="progress-bar" id="alegria">
+        <div class="progress-bar" id="alegría">
           <div class="progress" style="width: 0%"></div>
-          <span class="label">0%<br />Alegria</span>
+          <span class="label">0%<br />Alegría</span>
         </div>
         <div class="progress-bar" id="tristeza">
           <div class="progress" style="width: 0%"></div>
@@ -44,7 +47,7 @@
       <div class="progress-bars">
         <div class="progress-bar" id="estres">
           <div class="progress" style="width: 0%"></div>
-          <span class="label">0%<br />Estres</span>
+          <span class="label">0%<br />Estrés</span>
         </div>
         <div class="progress-bar" id="irritabilidad">
           <div class="progress" style="width: 0%"></div>
@@ -57,7 +60,6 @@
       </div>
       <!-- <button id="btnVerSemana">Ver semana</button>-->
 
-      <button id="resultados">Ver resultados</button>
     </div>
     <div class="circle circle1"></div>
     <div class="circle circle2"></div>
