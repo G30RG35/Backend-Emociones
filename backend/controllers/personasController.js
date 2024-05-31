@@ -75,7 +75,7 @@ export const actualizarUsuario = async (req, res) => {
 
   try {
     // Verificar si el usuario existe en la base de datos
-    const [rows] = await db.execute("SELECT * FROM usuarios WHERE id = ?", [
+    const [rows] = await db.execute("SELECT * FROM personas WHERE id_persona = ?", [
       id,
     ]);
 
@@ -86,7 +86,7 @@ export const actualizarUsuario = async (req, res) => {
 
     // Actualizar los datos del usuario en la base de datos
     await db.execute(
-      "UPDATE usuarios SET nombre = ?, correo = ? WHERE id = ?",
+      "UPDATE personas SET nombre = ?, email = ? WHERE id_persona = ?",
       [nombre, correo, id]
     );
 

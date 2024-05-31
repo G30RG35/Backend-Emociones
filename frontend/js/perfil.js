@@ -42,7 +42,7 @@ $(document).ready(function () {
     };
 
     $.ajax({
-        url: "http://localhost:3000/personas/usuario/",
+        url: "http://localhost:3000/personas/usuario",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify(nuevosDatosUsuario),
@@ -51,7 +51,7 @@ $(document).ready(function () {
           // Borrar el token del localStorage
           window.localStorage.removeItem("token");
           // Redirigir al usuario a la pantalla de inicio de sesión
-          window.location.href = "ruta/a/la/pagina/de/login.html";
+          window.location.href = "http://127.0.0.1:5501/frontend/public/is.html";
         },
         error: function (xhr, status, error) {
           console.error("Error al actualizar los datos:", error);

@@ -62,7 +62,7 @@ $(document).ready(function () {
       console.log(data);
       // Envía los datos al backend
       $.ajax({
-        url: "http://localhost:3000/registros", // URL del endpoint de registros
+        url: "http://localhost:3000/registros",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify(data),
