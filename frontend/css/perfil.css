@@ -1,0 +1,26 @@
+.inputs{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.form_submit{
+    background: #7373C3;  
+    background: rgb(16,2,43);
+    background: linear-gradient(157deg, rgba(16,2,43,1) 0%, rgba(26,10,77,1) 45%, rgba(18,17,87,1) 80%);  /* Degradado de color */
+    color: #fff; 
+    font-family: 'Roboto', sans-serif;
+    font-weight:300 ;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+    margin:2em;
+}
