@@ -83,7 +83,7 @@ header {
 .title {
     margin-bottom: 30px;
     font-size: 24px;
-    color: #333;
+    color: #e4e6ffaf;
 }
 
 .button-container {
@@ -94,8 +94,10 @@ header {
 
 /* Estilo para el botón primario */
 .btn-primary {
+    font-family: 'Poppins';
     background-color: #318dcb70;
-    color: white;
+    color: #e4e6ffaf;
+    font-size: 20px;
 }
 
 .btn-primary:hover {
@@ -104,8 +106,10 @@ header {
 
 /* Estilo para el botón secundario */
 .btn-secondary {
+    font-family: 'Poppins';
     background-color: #f9c70162;
-    color: white;
+    color: #e4e6ffaf;
+    font-size: 20px;
 }
 
 .btn-secondary:hover {
@@ -124,7 +128,7 @@ header {
 .title2 {
     margin-bottom: 30px;
     font-size: 24px;
-    color: #333;
+    color: #e4e6ffaf;
 }
 
 .button-container2 {
@@ -136,8 +140,10 @@ header {
 
 /* Estilo para el botón primario */
 .btn-primary2 {
+    font-family: 'Poppins';
     background-color: #76b54396;
-    color: white;
+    color: #e4e6ffaf;
+    font-size: 20px;
 }
 
 .btn-primary2:hover {
@@ -146,8 +152,10 @@ header {
 
 /* Estilo para el botón secundario */
 .btn-secondary2 {
+    font-family: 'Poppins';
     background-color: #be6ba57e;
-    color: white;
+    color: #e4e6ffaf;
+    font-size: 20px;
 }
 
 .btn-secondary2:hover {
