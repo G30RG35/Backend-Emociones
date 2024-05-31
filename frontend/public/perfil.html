@@ -30,20 +30,20 @@
 
             <div class="container">
                 <div class="content-box">
-                    <h1 class="title">Elige una opción</h1>
-                    <div class="button-container">
-                        <button class="btn btn-primary">Botón Primario</button>
-                        <button class="btn btn-secondary">Botón Secundario</button>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="content-box2">
-                    <h1 class="title2">Elige una opción</h1>
-                    <div class="button-container2">
-                        <button class="btn btn-primary2">Botón Primario</button>
-                        <button class="btn btn-secondary2">Botón Secundario</button>
-                    </div>
+                    <h1 class="title">Bienvenido</h1>
+                    <form id="cambiarDatosForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nuevoNombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo Electrónico:</label>
+                            <input type="email" id="nuevoCorreo" name="nuevoCorreo" required>
+                        </div>
+                        <div class="form-group">
+                            <button id="btnGuardar">Guardar Cambios</button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -89,6 +89,7 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/perfil.js"></script>
     <script src="../js/main.js"></script>
 </body>
 
