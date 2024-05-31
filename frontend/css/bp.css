@@ -73,6 +73,7 @@ header {
     padding: 50px 90px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.178);
+    margin-top: 30vh;
 }
 .progress-bars {
     display: flex;
