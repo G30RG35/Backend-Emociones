@@ -1,0 +1,760 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Encode+Sans+Semi+Expanded:wght@300;400;500;800&family=Exo+2:wght@600&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,500;0,700;1,100&display=swap');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins';
+    background: rgb(16,2,43);
+    background: linear-gradient(157deg, rgba(16,2,43,1) 0%, rgba(26,10,77,1) 45%, rgba(18,17,87,1) 80%);  /* Degradado de color */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.247); /* Fondo semi-transparente para el header */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    text-align: left;
+}
+
+nav ul li a:hover {
+    text-decoration:underline;
+    text-underline-offset: 10px;  
+}
+
+nav ul li a {
+    color:#9ca1ff8e;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul li a.button {
+    font-weight: bold;
+    color:#190B4E;
+    background-color: #9ca1ff83;
+}
+
+/*area de escribir*/
+.general
+{
+    margin: auto;
+    margin-top: 100px;
+    width: 1500px;
+    height: 5500px;
+    background:#6c6faf54; 
+    z-index: 300;
+}
+.botones
+{
+    float: right;
+    width: 300px;
+    height: 450px;
+    background:#6c6faf3b; 
+}
+
+.titulo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 200px;
+    background:#6c6faf93; 
+}
+.titulo h1
+{
+    color:#c7caff ;
+    font-family: 'Roboto';
+    font-size: 4em;
+    letter-spacing: 10px;
+}
+.info
+{
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 1080px;
+    height: 5200px;
+    background:#6c6faf70; 
+}
+.boton-neon {
+    display: inline-block;
+    padding: 15px 32px;
+    margin-right: 20px; /* Espacio entre los botones */
+    font-size: 16px;
+    top: 0px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #c7caff; /* Color del borde */
+    color: #c7caff; /* Color del texto */
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+   /* Estilos para la animacion de colores neon */
+   .boton-neon::before {
+    content: '';
+    background:linear-gradient(90deg, rgba(66, 61, 136, 0.952) 21%, rgba(20, 15, 92, 0.856) 54%, rgba(4, 0, 66, 0.877) 85%);  /* Degradado de color */
+    background-size: 600% 600%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .boton-neon:hover::before {
+    opacity: 1;
+  }
+
+  /* Estilo para el texto */
+  .boton-neon span {
+    position: relative;
+    z-index: 1;
+    }
+  .botones/* Contenedor de los botones */
+   { 
+      text-align: center;
+   }
+
+   p{
+    margin: 20px;
+    color:  #c7caff;
+    font-size: 20px;
+   }
+
+   h2{
+    margin: 20px;
+   }
+
+   .tito{
+    text-align: right;
+    font-family: 'Roboto';
+    font-size: 3em;
+    letter-spacing: 5px;
+    color:  #c7caff;
+   }
+
+   .sub{
+    font-family: 'Roboto';
+    font-size: 3em;
+    letter-spacing: 5px;
+    color:  #c7caff;
+   }
+
+   .ali{
+    width:300px;
+	height:300px;
+    margin: 0 5px;
+   }
+
+   .cont{
+    display: flex;
+    justify-content: center;
+   }
+   .texto
+   {
+     margin-top: 30px;
+     margin-left: 60px;
+     margin-right: 60px;
+   }
+
+   .circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Ejemplo de varios círculos con diferentes tamaños y posiciones */
+.circle1 {
+    width: 100px;
+    height: 100px;
+    background-color: #f9c70125;
+    top: 100px;
+    left: 100px;
+}
+
+.circle2 {
+    width: 150px;
+    height: 150px;
+    background-color: #be6ba525;
+    top: 200px;
+    left: 300px;
+}
+
+.circle3 {
+    width: 80px;
+    height: 80px;
+    background-color: #e5281e25;
+    top: 400px;
+    left: 50px;
+}
+
+.circle4 {
+    width: 120px;
+    height: 120px;
+    background-color: #318dcb25;
+    top: 100px;
+    left: 500px;
+}
+
+.circle5 {
+    width: 90px;
+    height: 90px;
+    background-color: #e5281e25;
+    top: 300px;
+    left: 700px;
+}
+
+.circle6 {
+    width: 130px;
+    height: 130px;
+    background-color: #f9c70125;
+    top: 500px;
+    left: 200px;
+}
+
+.circle7 {
+    width: 110px;
+    height: 110px;
+    background-color:#e5281e25 ;
+    top: 650px;
+    left: 1250px;
+}
+
+.circle8 {
+    width: 140px;
+    height: 140px;
+    background-color: #76b54325;
+    top: 150px;
+    left: 900px;
+}
+
+.circle9 {
+    width: 70px;
+    height: 70px;
+    background-color:#76b54325 ;
+    top: 350px;
+    left: 400px;
+}
+
+.circle10 {
+    width: 160px;
+    height: 160px;
+    background-color: #f9c70125;
+    top: 450px;
+    left: 700px;
+}
+.circle11 {
+    width: 100px;
+    height: 100px;
+    background-color: #318dcb25;
+    top: 640px;
+    left: 630px;
+}
+
+.circle12 {
+    width: 150px;
+    height: 150px;
+    background-color:#be6ba525 ;
+    top: 700px;
+    left: 70px;
+}
+
+.circle13 {
+    width: 80px;
+    height: 80px;
+    background-color: #be6ba525;
+    top: 400px;
+    left: 900px;
+}
+.circle14 {
+    width: 100px;
+    height: 100px;
+    background-color: #e5281e25;
+    top: 600px;
+    left: 400px;
+}
+
+.circle15 {
+    width: 150px;
+    height: 150px;
+    background-color: #318dcb25;
+    top: 300px;
+    left: 1100px;
+}
+
+.circle16 {
+    width: 80px;
+    height: 80px;
+    background-color: #be6ba525;
+    top: 450px;
+    left: 500px;
+}
+
+.circle17 {
+    width: 120px;
+    height: 120px;
+    background-color: #e5281e25;
+    top: 50px;
+    left: 1100px;
+}
+
+.circle18 {
+    width: 90px;
+    height: 90px;
+    background-color: #be6ba525;
+    top: 90px;
+    left: 1300px;
+}
+
+.circle19 {
+    width: 130px;
+    height: 130px;
+    background-color: #f9c70125;
+    top: 550px;
+    left: 1530px;
+}
+
+.circle20 {
+    width: 110px;
+    height: 110px;
+    background-color:#76b54325 ;
+    top: 250px;
+    left: 1400px;
+}
+
+.circle21 {
+    width: 140px;
+    height: 140px;
+    background-color: #e5281e25;
+    top: 150px;
+    left: 1730px;
+}
+
+.circle22 {
+    width: 70px;
+    height: 70px;
+    background-color: #318dcb25;
+    top: 150px;
+    left: 1550px;
+}
+
+.circle23 {
+    width: 160px;
+    height: 160px;
+    background-color: #318dcb25;
+    top: 650px;
+    left: 1720px;
+}
+.circle24 {
+    width: 100px;
+    height: 100px;
+    background-color: #be6ba525;
+    top: 450px;
+    left: 1400px;
+}
+
+.circle25 {
+    width: 150px;
+    height: 150px;
+    background-color: #76b54325 ;
+    top: 550px;
+    left: 950px;
+}
+
+.circle26 {
+    width: 80px;
+    height: 80px;
+    background-color: #be6ba525;
+    top: 400px;
+    left: 1700px;
+}
+
+.circle27 {
+    width: 100px;
+    height: 100px;
+    background-color: #e5281e25;
+    top: 10px;
+    left: 300px;
+}
+
+.circle28 {
+    width: 150px;
+    height: 150px;
+    background-color: #be6ba525;
+    top: 800px;
+    left: 1000px;
+}
+
+.circle29 {
+    width: 80px;
+    height: 80px;
+    background-color: #76b54325;
+    top: 800px;
+    left: 400px;
+}
+
+.circle30 {
+    width: 120px;
+    height: 120px;
+    background-color: #be6ba525;
+    top: 20px;
+    left: 720px;
+}
+
+.circle31 {
+    width: 90px;
+    height: 90px;
+    background-color: #be6ba525;
+    top: 850px;
+    left: 600px;
+}
+.circle32 {
+    width: 100px;
+    height: 100px;
+    background-color: #76b54325;
+    top: 770px;
+    left: 800px;
+}
+
+.circle33 {
+    width: 150px;
+    height: 150px;
+    background-color: #76b54325;
+    top: 770px;
+    left: 1450px;
+}
+
+.circle34 {
+    width: 80px;
+    height: 80px;
+    background-color: #318dcb25;
+    top: 860px;
+    left: 1280px;
+}
+
+.circle35 {
+    width: 70px;
+    height: 70px;
+    background-color: #be6ba525;
+    top: 870px;
+    left: 1750px;
+}
+
+.circle36 {
+    width: 90px;
+    height: 90px;
+    background-color: #f9c70125;
+    top: 30px;
+    left: 1650px;
+}
+
+
+.circle37 {
+    width: 100px;
+    height: 100px;
+    background-color: #f9c70125;
+    top: 1000px;
+    left: 100px;
+}
+
+.circle8 {
+    width: 150px;
+    height: 150px;
+    background-color: #be6ba525;
+    top: 2000px;
+    left: 300px;
+}
+
+.circle39 {
+    width: 80px;
+    height: 80px;
+    background-color: #e5281e25;
+    top: 4000px;
+    left: 50px;
+}
+
+.circle40 {
+    width: 120px;
+    height: 120px;
+    background-color: #318dcb25;
+    top: 1000px;
+    left: 500px;
+}
+
+.circle41 {
+    width: 90px;
+    height: 90px;
+    background-color: #e5281e25;
+    top: 1330px;
+    left: 700px;
+}
+
+.circle42 {
+    width: 130px;
+    height: 130px;
+    background-color: #f9c70125;
+    top: 1200px;
+    left: 200px;
+}
+
+.circle43 {
+    width: 110px;
+    height: 110px;
+    background-color:#e5281e25 ;
+    top: 1400px;
+    left: 1250px;
+}
+
+.circle44 {
+    width: 140px;
+    height: 140px;
+    background-color: #76b54325;
+    top: 1500px;
+    left: 900px;
+}
+
+.circle45 {
+    width: 70px;
+    height: 70px;
+    background-color:#76b54325 ;
+    top: 1450px;
+    left: 400px;
+}
+
+.circle46 {
+    width: 160px;
+    height: 160px;
+    background-color: #f9c70125;
+    top: 1550px;
+    left: 700px;
+}
+.circle47 {
+    width: 100px;
+    height: 100px;
+    background-color: #318dcb25;
+    top: 2240px;
+    left: 630px;
+}
+
+.circle48 {
+    width: 150px;
+    height: 150px;
+    background-color:#be6ba525 ;
+    top: 2500px;
+    left: 70px;
+}
+
+.circle59 {
+    width: 80px;
+    height: 80px;
+    background-color: #be6ba525;
+    top: 1400px;
+    left: 900px;
+}
+.circle50 {
+    width: 100px;
+    height: 100px;
+    background-color: #e5281e25;
+    top: 2100px;
+    left: 400px;
+}
+
+
+.circle51 {
+    width: 150px;
+    height: 150px;
+    background-color: #318dcb25;
+    top: 1300px;
+    left: 1100px;
+}
+
+.circle52 {
+    width: 80px;
+    height: 80px;
+    background-color: #be6ba525;
+    top: 1450px;
+    left: 500px;
+}
+
+.circle53 {
+    width: 120px;
+    height: 120px;
+    background-color: #e5281e25;
+    top: 1050px;
+    left: 1100px;
+}
+
+.circle54 {
+    width: 90px;
+    height: 90px;
+    background-color: #be6ba525;
+    top: 1190px;
+    left: 1300px;
+}
+
+.circle55 {
+    width: 130px;
+    height: 130px;
+    background-color: #f9c70125;
+    top: 1250px;
+    left: 1530px;
+}
+
+.circle56 {
+    width: 110px;
+    height: 110px;
+    background-color:#76b54325 ;
+    top: 2250px;
+    left: 1400px;
+}
+
+.circle57 {
+    width: 140px;
+    height: 140px;
+    background-color: #e5281e25;
+    top: 3150px;
+    left: 1730px;
+}
+
+.circle58 {
+    width: 70px;
+    height: 70px;
+    background-color: #318dcb25;
+    top: 1150px;
+    left: 1550px;
+}
+
+.circle59 {
+    width: 160px;
+    height: 160px;
+    background-color: #318dcb25;
+    top: 1650px;
+    left: 1720px;
+}
+.circle60 {
+    width: 100px;
+    height: 100px;
+    background-color: #be6ba525;
+    top: 1550px;
+    left: 1400px;
+}
+
+.circle61 {
+    width: 150px;
+    height: 150px;
+    background-color: #76b54325 ;
+    top: 2550px;
+    left: 950px;
+}
+
+.circle62 {
+    width: 80px;
+    height: 80px;
+    background-color: #be6ba525;
+    top: 3400px;
+    left: 1700px;
+}
+
+.circle63 {
+    width: 100px;
+    height: 100px;
+    background-color: #e5281e25;
+    top: 1010px;
+    left: 300px;
+}
+
+.circle64 {
+    width: 150px;
+    height: 150px;
+    background-color: #be6ba525;
+    top: 1800px;
+    left: 1000px;
+}
+
+.circle65 {
+    width: 80px;
+    height: 80px;
+    background-color: #76b54325;
+    top: 2800px;
+    left: 400px;
+}
+
+.circle66 {
+    width: 120px;
+    height: 120px;
+    background-color: #be6ba525;
+    top: 3620px;
+    left: 720px;
+}
+
+.circle67 {
+    width: 90px;
+    height: 90px;
+    background-color: #be6ba525;
+    top: 2850px;
+    left: 600px;
+}
+.circle68 {
+    width: 100px;
+    height: 100px;
+    background-color: #76b54325;
+    top: 3770px;
+    left: 800px;
+}
+
+.circle69 {
+    width: 150px;
+    height: 150px;
+    background-color: #76b54325;
+    top: 2770px;
+    left: 1450px;
+}
+
+.circle70 {
+    width: 80px;
+    height: 80px;
+    background-color: #318dcb25;
+    top: 3860px;
+    left: 1280px;
+}
+
+.circle35 {
+    width: 70px;
+    height: 70px;
+    background-color: #be6ba525;
+    top: 1670px;
+    left: 70px;
+}
+
+.circle36 {
+    width: 90px;
+    height: 90px;
+    background-color: #f9c70125;
+    top: 2030px;
+    left: 90px;
+}
