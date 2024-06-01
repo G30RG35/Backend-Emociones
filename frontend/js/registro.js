@@ -12,6 +12,11 @@ $(document).ready(function() {
             password: password
         };
 
+        const loginData = {
+            email: email,
+            password: password
+        };
+
         console.log('Datos de registro:', registroData);
 
         $.ajax({
@@ -20,10 +25,25 @@ $(document).ready(function() {
             contentType: 'application/json',
             data: JSON.stringify(registroData),
             success: function(response) {
-        
-                console.log('Registro exitoso:', response);
+                $.ajax({
+                    url: 'http://localhost:3000/personas/login', 
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(loginData),
+                    success: function(response) {
+                        console.log('Login exitoso:', response);
+                        window.localStorage.setItem('token', response?.token);
+                        // alert('Login exitoso');
+                        window.location.href = 'principal.html';
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error en el login:', error);
+                        alert('Error en el login: ' + xhr.responseJSON.error);
+                    }
+                });
+                // console.log('Registro exitoso:', response);
                
-                window.location.href = 'principal.html';
+                // window.location.href = 'principal.html';
 
             },
             error: function(xhr, status, error) {
